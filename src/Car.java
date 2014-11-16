@@ -37,6 +37,15 @@ public class Car {
 		}
 	}
 	
+	public void decelerate(int amount){
+		int limit = this.maxSpeed - this.speed;
+		if(amount >= limit){
+			this.speed = limit;
+		}else{
+			this.speed = amount;
+		}
+	}
+	
 	/**
 	 * Displays the object as a string in the format
 	 * "Color: red, Speed: 100"
